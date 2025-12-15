@@ -21,7 +21,7 @@
 ## Pipeline
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fracabu/tube-forge-agents-team/main/docs/assets/pipeline-animated.svg" alt="TubeForge Agent Pipeline" width="100%" />
+  <img src="docs/assets/pipeline.png" alt="TubeForge Agent Pipeline" width="100%" />
 </p>
 
 ---
