@@ -1,0 +1,20 @@
+# Environment files
+.env
+.env.*
+*.local.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local settings (keep settings.local.json for agent permissions)
+# .claude/settings.local.json - intentionally tracked
