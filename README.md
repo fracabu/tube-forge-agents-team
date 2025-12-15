@@ -18,6 +18,14 @@
 
 ---
 
+## Pipeline
+
+<p align="center">
+  <img src="docs/assets/pipeline-animated.svg" alt="TubeForge Agent Pipeline" width="100%" />
+</p>
+
+---
+
 <a name="english"></a>
 ## :gb: English
 
