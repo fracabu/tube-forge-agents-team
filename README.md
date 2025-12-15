@@ -18,10 +18,18 @@
 
 ---
 
-## Pipeline
+## Agent Architecture
 
 <p align="center">
-  <img src="docs/assets/pipeline.png" alt="TubeForge Agent Pipeline" width="100%" />
+  <img src="docs/assets/agent-architecture.png" alt="Agent Architecture Hierarchy" width="700" />
+</p>
+
+---
+
+## Tech Stack
+
+<p align="center">
+  <img src="docs/assets/tech-stack.png" alt="Tech Stack" width="500" />
 </p>
 
 ---
@@ -32,26 +40,6 @@
 ### Overview
 
 TubeForge is a **multi-agent orchestration system** built with Claude Code that automates the entire YouTube video production pipeline. It coordinates 6 specialized AI agents to produce high-quality content for Italian small business owners interested in AI automation.
-
-### Agent Architecture
-
-| Agent | Role |
-|-------|------|
-| **niche-scout-alpha** | Market validation & competitor research |
-| **content-strategos** | 10-video roadmap planning |
-| **narrative-forge** | Script writing & AI generation prompts |
-| **media-synth-core** | Production workflow guides |
-| **broadcast-ops** | SEO optimization & YouTube publishing |
-| **metric-loop-sentinel** | Analytics feedback & strategy refinement |
-
-### Tech Stack
-
-- **Orchestration**: Claude Code multi-agent system
-- **Audio**: NotebookLM for narration
-- **Video Generation**: Kling AI, Sora, Runway
-- **Editing**: DaVinci Resolve, CapCut
-- **Design**: Canva
-- **Publishing**: YouTube Studio
 
 ### Features
 
