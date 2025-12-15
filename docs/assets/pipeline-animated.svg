@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" role="img">
+  <title>TubeForge Agents Pipeline</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f8fafc;
+      --text: #1e293b;
+      --muted: #64748b;
+      --stroke: #e2e8f0;
+      --agent1: #8b5cf6;
+      --agent2: #3b82f6;
+      --agent3: #06b6d4;
+      --agent4: #10b981;
+      --agent5: #f59e0b;
+      --agent6: #ef4444;
+      --glow: rgba(139, 92, 246, 0.3);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --panel: #1e293b;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --stroke: #334155;
+        --glow: rgba(139, 92, 246, 0.5);
+      }
+    }
+    svg { background: var(--bg); font-family: ui-sans-serif, system-ui, sans-serif; }
+    .title { font-size: 24px; font-weight: 700; fill: var(--text); }
+    .subtitle { font-size: 14px; fill: var(--muted); }
+    .agent-box { fill: var(--panel); stroke-width: 2; rx: 12; }
+    .agent-name { font-size: 11px; font-weight: 700; fill: var(--text); }
+    .agent-role { font-size: 9px; fill: var(--muted); }
+    .agent-icon { font-size: 20px; }
+    .connector { stroke: var(--stroke); stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+
+    /* Pulse animation for agents */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.02); }
+    }
+
+    /* Flow animation for connectors */
+    @keyframes flow {
+      0% { stroke-dashoffset: 20; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 3px var(--glow)); }
+      50% { filter: drop-shadow(0 0 8px var(--glow)); }
+    }
+
+    .agent-1 { stroke: var(--agent1); animation: pulse 3s ease-in-out infinite; }
+    .agent-2 { stroke: var(--agent2); animation: pulse 3s ease-in-out infinite 0.5s; }
+    .agent-3 { stroke: var(--agent3); animation: pulse 3s ease-in-out infinite 1s; }
+    .agent-4 { stroke: var(--agent4); animation: pulse 3s ease-in-out infinite 1.5s; }
+    .agent-5 { stroke: var(--agent5); animation: pulse 3s ease-in-out infinite 2s; }
+    .agent-6 { stroke: var(--agent6); animation: pulse 3s ease-in-out infinite 2.5s; }
+
+    .connector { animation: flow 1.5s linear infinite; }
+
+    .data-dot {
+      fill: var(--agent1);
+      animation: moveDot 6s ease-in-out infinite;
+    }
+
+    @keyframes moveDot {
+      0% { cx: 175; cy: 200; opacity: 1; }
+      16% { cx: 310; cy: 200; opacity: 1; }
+      17% { cx: 310; cy: 200; opacity: 0; }
+      18% { cx: 175; cy: 320; opacity: 0; }
+      19% { cx: 175; cy: 320; opacity: 1; }
+      33% { cx: 310; cy: 320; opacity: 1; }
+      34% { cx: 310; cy: 320; opacity: 0; }
+      35% { cx: 445; cy: 200; opacity: 0; }
+      36% { cx: 445; cy: 200; opacity: 1; }
+      50% { cx: 580; cy: 200; opacity: 1; }
+      51% { cx: 580; cy: 200; opacity: 0; }
+      52% { cx: 445; cy: 320; opacity: 0; }
+      53% { cx: 445; cy: 320; opacity: 1; }
+      66% { cx: 580; cy: 320; opacity: 1; }
+      67% { cx: 580; cy: 320; opacity: 0; }
+      68% { cx: 715; cy: 200; opacity: 0; }
+      69% { cx: 715; cy: 200; opacity: 1; }
+      83% { cx: 850; cy: 200; opacity: 1; }
+      84% { cx: 850; cy: 200; opacity: 0; }
+      85% { cx: 715; cy: 320; opacity: 0; }
+      86% { cx: 715; cy: 320; opacity: 1; }
+      100% { cx: 850; cy: 320; opacity: 1; }
+    }
+
+    .output-icon { animation: glow 2s ease-in-out infinite; }
+  </style>
+
+  <!-- Header -->
+  <text x="500" y="45" text-anchor="middle" class="title">TubeForge Agent Pipeline</text>
+  <text x="500" y="70" text-anchor="middle" class="subtitle">6 AI agents orchestrating YouTube content production</text>
+
+  <!-- Row 1: Research & Strategy -->
+
+  <!-- Agent 1: Niche Scout -->
+  <g transform="translate(60, 120)">
+    <rect width="130" height="100" class="agent-box agent-1" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">🔍</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">niche-scout</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">Market Research</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">& Validation</text>
+  </g>
+
+  <!-- Connector 1→2 -->
+  <path d="M 195 170 L 230 170" class="connector" style="stroke: var(--agent1);" />
+  <polygon points="228,165 238,170 228,175" fill="var(--agent1)" />
+
+  <!-- Agent 2: Content Strategos -->
+  <g transform="translate(240, 120)">
+    <rect width="130" height="100" class="agent-box agent-2" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">📋</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">content-strategos</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">10-Video</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">Roadmap</text>
+  </g>
+
+  <!-- Connector 2→3 -->
+  <path d="M 375 170 L 410 170" class="connector" style="stroke: var(--agent2);" />
+  <polygon points="408,165 418,170 408,175" fill="var(--agent2)" />
+
+  <!-- Agent 3: Narrative Forge -->
+  <g transform="translate(420, 120)">
+    <rect width="130" height="100" class="agent-box agent-3" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">✍️</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">narrative-forge</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">Script Writing</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">& AI Prompts</text>
+  </g>
+
+  <!-- Row 2: Production & Distribution -->
+
+  <!-- Agent 4: Media Synth -->
+  <g transform="translate(60, 280)">
+    <rect width="130" height="100" class="agent-box agent-4" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">🎬</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">media-synth-core</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">Production</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">Workflow</text>
+  </g>
+
+  <!-- Connector 3→4 (down) -->
+  <path d="M 485 225 L 485 255 L 125 255 L 125 275" class="connector" style="stroke: var(--agent3);" />
+  <polygon points="120,273 125,283 130,273" fill="var(--agent3)" />
+
+  <!-- Connector 4→5 -->
+  <path d="M 195 330 L 230 330" class="connector" style="stroke: var(--agent4);" />
+  <polygon points="228,325 238,330 228,335" fill="var(--agent4)" />
+
+  <!-- Agent 5: Broadcast Ops -->
+  <g transform="translate(240, 280)">
+    <rect width="130" height="100" class="agent-box agent-5" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">📡</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">broadcast-ops</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">SEO & YouTube</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">Publishing</text>
+  </g>
+
+  <!-- Connector 5→6 -->
+  <path d="M 375 330 L 410 330" class="connector" style="stroke: var(--agent5);" />
+  <polygon points="408,325 418,330 408,335" fill="var(--agent5)" />
+
+  <!-- Agent 6: Metric Loop -->
+  <g transform="translate(420, 280)">
+    <rect width="130" height="100" class="agent-box agent-6" />
+    <text x="65" y="35" text-anchor="middle" class="agent-icon">📊</text>
+    <text x="65" y="58" text-anchor="middle" class="agent-name">metric-loop</text>
+    <text x="65" y="72" text-anchor="middle" class="agent-role">Analytics</text>
+    <text x="65" y="86" text-anchor="middle" class="agent-role">& Feedback</text>
+  </g>
+
+  <!-- Feedback Loop Arrow (6 back to 1) -->
+  <path d="M 485 385 L 485 420 L 50 420 L 50 170 L 55 170" class="connector" style="stroke: var(--agent6); stroke-dasharray: 4 6;" />
+  <polygon points="53,165 63,170 53,175" fill="var(--agent6)" />
+  <text x="270" y="438" text-anchor="middle" class="agent-role" style="font-size: 10px;">Continuous improvement loop</text>
+
+  <!-- Output Section -->
+  <g transform="translate(620, 140)">
+    <rect width="320" height="240" rx="16" fill="var(--panel)" stroke="var(--stroke)" stroke-width="1" />
+    <text x="160" y="30" text-anchor="middle" class="agent-name" style="font-size: 13px;">OUTPUT PER VIDEO</text>
+
+    <!-- Output items -->
+    <g transform="translate(20, 50)" class="output-icon">
+      <text x="0" y="15" style="font-size: 14px;">📝</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">Script + Timestamps</text>
+    </g>
+    <g transform="translate(160, 50)">
+      <text x="0" y="15" style="font-size: 14px;">🎨</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">AI Image Prompts</text>
+    </g>
+    <g transform="translate(20, 85)">
+      <text x="0" y="15" style="font-size: 14px;">🎥</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">Video Gen Prompts</text>
+    </g>
+    <g transform="translate(160, 85)">
+      <text x="0" y="15" style="font-size: 14px;">🔊</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">NotebookLM Audio</text>
+    </g>
+    <g transform="translate(20, 120)">
+      <text x="0" y="15" style="font-size: 14px;">🏷️</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">Title + Description</text>
+    </g>
+    <g transform="translate(160, 120)">
+      <text x="0" y="15" style="font-size: 14px;">#️⃣</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">Tags + Hashtags</text>
+    </g>
+    <g transform="translate(20, 155)">
+      <text x="0" y="15" style="font-size: 14px;">🖼️</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">Thumbnail Prompt</text>
+    </g>
+    <g transform="translate(160, 155)">
+      <text x="0" y="15" style="font-size: 14px;">✅</text>
+      <text x="25" y="15" class="agent-role" style="font-size: 11px;">QA Checklist</text>
+    </g>
+
+    <!-- Tech Stack -->
+    <line x1="20" y1="185" x2="300" y2="185" stroke="var(--stroke)" />
+    <text x="160" y="205" text-anchor="middle" class="agent-role" style="font-size: 10px;">POWERED BY</text>
+    <text x="160" y="225" text-anchor="middle" class="agent-name" style="font-size: 10px;">Claude Code · NotebookLM · Kling AI · Sora · Runway</text>
+  </g>
+
+  <!-- Animated data dot -->
+  <circle r="5" class="data-dot" />
+
+</svg>
